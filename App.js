@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 function HomeScreen() {
   return (
@@ -34,7 +35,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} 
+          options
+        />
         <Tab.Screen name="About" component={AboutScreen} />
         <Tab.Screen name="Contact" component={ContactScreen} />
       </Tab.Navigator>
